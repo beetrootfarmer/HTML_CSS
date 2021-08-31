@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modernizr</title>
+    <!--다운받은 Modernizr라이브러리 링크-->
+    <script scr="js/modernizr-custom.js"></script>
+</head>
+<body>
+    <!--h1+img+script-->
+    <h1>SVG이미지</h1>
+    <img src="images/muffin.svg" alt="">
+    <!--javascript-->
+    <script>
+        //위에서 만든 img태그를 변수로 담음
+        var img = document.querySelector("img");
+        // moderniz-custom.js를 이용하여 svg파일형식을 지원하는 브라우저인지 체크 
+        if(!Modernizr.svg) {
+            img.setAttribute("scr", "images/muffing.png");
+        }
+    </script>
+  
+    
+</body>
+</html>
